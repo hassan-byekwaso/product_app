@@ -28,8 +28,16 @@ mongoose
 const productRoutes = require("./routes/product_routes");
 
 // Use the product routes for any requests to /api/products
-// Example: localhost:5000/api/products
-app.use("/api/products", productRoutes);
+// Example: localhost:5000/product_app/products
+app.use("/product_app/products", productRoutes);
+
+//user routes
+const userRoutes = require("./routes/user_routes");
+
+app.use("/product_app/users", userRoutes);
+
+//example endpoints or url
+
 
 // Launch the server
 app.listen(process.env.PORT, () => {
